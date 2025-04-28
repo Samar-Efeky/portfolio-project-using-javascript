@@ -20,6 +20,6 @@ export function navbar(){
         sidebar.style.right="0%";
     })
     closeSidebar.addEventListener("click",()=>{
-        sidebar.style.right="-50%";
+        sidebar.style.right="-150%";
     })
 }
