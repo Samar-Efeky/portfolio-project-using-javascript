@@ -107,7 +107,7 @@ i{
   z-index: 1000000;
   border-left: 1px solid var(--border-color);
   width: 25%;
-  right: -50%;
+  right: -100%;
   transition: all 0.3s ease;
 }
 .main-content{
