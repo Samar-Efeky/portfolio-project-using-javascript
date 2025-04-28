@@ -52,7 +52,7 @@ i{
 /* .................... general styling end ...........................................................................*/
 .navbar-content{
   border-bottom: 0.1px solid var(--border-color);
-  z-index: 100;
+  z-index: 99;
 }
 .logo{
   border-right: 0.1px solid var(--border-color);
@@ -73,7 +73,7 @@ i{
     padding: 10px 0;
     min-width: 180px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    z-index: 1000;
+    z-index: 100;
     transform: translate(-10%,50%);
     transition: all 0.3s ease-out;
 } 
@@ -104,11 +104,11 @@ i{
   border-left:0.1px solid var(--border-color) ;
 }
 .side-bar{
-  z-index: 1000000;
+  z-index: 200;
   border-left: 1px solid var(--border-color);
   width: 25%;
-  right: -100%;
-  transition: all 0.3s ease;
+  right: -150%;
+  transition: all 0.3s;
 }
 .main-content{
   color: var(--border-color);
@@ -132,7 +132,18 @@ i{
 .icons{
   display: none;
 }
-@media screen and (max-width:992px){
+@media screen and (max-width:1300px){
+  #button-navbar{
+    display: none;
+  }
+  .side-bar{
+    width: 40%;
+  }
+}
+@media screen and (max-width:950px){
+  #button-navbar{
+    display: block;
+  }
   i{
     font-size: 1rem;
   }
@@ -144,9 +155,6 @@ i{
   }
   .logo img{
     width: 55%;
-  }
-  .side-bar{
-    width: 70%;
   }
   .navbar-links{
     display: none;
@@ -168,5 +176,16 @@ i{
   }
   .icons .fa-xmark{
     display: none;
+  }
+  .side-bar{
+    width: 50%;
+  }
+}
+@media screen and (max-width:500px){
+  #button-navbar{
+    display: none;
+  }
+  .side-bar{
+    width: 80%;
   }
 }
