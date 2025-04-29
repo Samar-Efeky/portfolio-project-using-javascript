@@ -10,87 +10,47 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-   <nav class="w-100">
-    <div class="navbar-content fixed-top container-fluid bg-black d-flex ">
-        <div class="logo py-3 ">
-            <img src="images/download.png" class="" alt="matias">
-        </div><!-- logo -->
-        <ul class="navbar-links  justify-content-between   list-unstyled px-4 py-2 pt-4">
-            <li>
-                <a href="#">home</a>
-            </li>
-            <li>
-                <a href="#">about</a>
-            </li>
-            <li>
-                <a href="#">work</a>
-            </li>
-            <li class="dropdown  position-relative ">
-                <a href="#" class="dropdown-link">services</a>
-                    <div class="dropdown-list bg-white position-absolute top-100 start-0 ">
-                        <div class="arrow-up position-absolute"></div>
-                        <a href="#">services</a>
-                        <a href="#">service details</a>
-                    </div> <!-- dropdown-list -->
-            </li> 
-            <li>
-                <a href="#">testimonial</a>
-            </li>
-            <li class="dropdown position-relative ">
-                <a href="#" class="dropdown-link">blog</a>
-                    <div class="dropdown-list bg-white position-absolute top-100 start-0 ">
-                        <div class="arrow-up position-absolute"></div>
-                        <a href="#">blog</a>
-                        <a href="#">blog details</a>
-                    </div> <!-- dropdown-list -->
-            </li> 
-            <li>
-                <a href="#">contact</a>
-            </li>
-        </ul> <!-- navbar-links -->
-        <div class="icons-list   ms-auto px-3 py-3">
-           <div class="d-flex">
-            <button id="button-navbar" class="px-4 py-lg-2 ">Let's Talk <i class="fa-solid fa-arrow-right"></i></button>
-            <div class="icons text-white mx-3 position-relative">
-                <i class="fa-solid fa-bars lh-lg position-absolute "></i>
-                <i class="fa-solid fa-xmark  position-absolute lh-lg "></i>
-            </div> <!-- icons -->
-            <i id="list-navbar" class="fa-solid fa-bars px-3 bg-white text-black rounded-2   ms-3 lh-lg"></i>
-           </div>
-           <div class="side-bar position-fixed bg-black p-3 vh-100 top-0 ">
-            <div id="close-side-bar" class="position-absolute top-0 end-0 p-3">
-                <i class="fa-solid fa-xmark closed-content p-2 rounded-2"></i>
-            </div>
-            <div class="logo  border-0 mt-5">
-                <img src="images/download.png" class="" alt="logo">
-            </div>
-            <p class="my-4">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis, ex. Sunt molestias commodi, asperiores quos itaque voluptatum minima quasi dolores animi eveniet provident ullam nostrum. Quod labore corrupti amet nostrum!
-            Pariatur illum </p>
-            <div>
-                <span class="main-content fw-bolder text-uppercase">address</span>
-                <p>Nasr City, Egypt.</p>
-            </div>
-            <div>
-                <span class="main-content fw-bolder text-uppercase">email</span>
-                <p><a href="mailto:samarelfeky69@gmail.com">samarelfeky69@gmail.com</a></p>   
-            </div>
-            <div>
-                <span class="main-content fw-bolder text-uppercase">call now</span>
-                <p>+2012 0775 2327</p>
-            </div>
-            <div class="social-media py-5">
-                <i class="fa-brands fa-facebook"></i>
-                <i class="fa-brands fa-twitter"></i>
-                <i class="fa-brands fa-linkedin"></i>
-                <i class="fa-brands fa-youtube"></i>
-            </div> <!-- social-media -->
-            <div class="position-absolute bottom-0 start-0 w-100 px-5">
-                <button class="px-4 py-3  w-100"><i class="fa-solid fa-arrow-left"></i> Let's Talk</button>
-            </div>
-           </div> <!-- side-bar -->
-        </div>
-    </div> <!-- navbar-content -->
+   <nav id="navbar" class="w-100">
    </nav>
+   <header>
+    <div class="header-section w-100 vh-100 d-flex  align-items-center ">
+        <div class="left-info px-2 my-5">
+            <img src="images/image1.png" class="contact" alt="">
+            <div class="contact">
+                <span>(+20) 1207-752-327</span>
+            </div> <!-- contact -->
+            <div class="scroll-down pt-5">
+                <span>SCROLL DOWN</span>
+            </div> <!-- scroll-down -->
+            <img src="images/image2.png" class="scroll-down w-50" alt="">
+        </div> <!-- left-info -->
+        <div class="center-content p-lg-4 ps-3 ">
+            <div class="availability ">
+              <p ><a href="#">Currently Available For Freelance Worldwide<i id="arrow" class="fa-solid fa-arrow-right px-2"></i></a></p>
+              <hr>
+            </div> <!-- availability -->
+            <h1 class="fw-bolder">Creative Visual <br><span class="designer">Designer</span></h1>
+            <div class="video-play d-flex my-5">
+                <img src="images/image3.png" class="mx-2" alt="">
+                <i class="fa-solid fa-play mx-4 d-flex justify-content-center align-items-center"></i>
+                <p class="mx-2 mt-2">Work <br>Process</p>
+            </div> <!-- video-play -->
+        </div> <!-- center-content -->
+        <div class="header-image  text-end px-4">
+            <img src="images/header-image.png" class="" alt="">
+        </div> <!-- header-image -->
+        <div class="right-info px-2 my-5 pe-5">
+            <div class="follow-me">
+                <span>FOLLOW ME</span>
+            </div>
+            <img src="images/image2.png" class="follow-me w-50" alt="">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-linkedin"></i>
+            <i class="fa-brands fa-youtube"></i>
+        </div> <!-- right-info -->
+    </div> <!-- header-section -->
+   </header>
     <script type="module" src="script.js"></script>
 </body>
 </html>

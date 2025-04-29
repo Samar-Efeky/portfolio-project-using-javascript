@@ -50,10 +50,14 @@ i{
   cursor: pointer;
 }
 /* .................... general styling end ...........................................................................*/
+/*...................... navbar start .................................................................................*/
 .navbar-content{
+  background-color: var(--black-color);
   border-bottom: 0.1px solid var(--border-color);
   z-index: 99;
+  transition: background-color 0.4s;
 }
+/*================= logo =======================*/
 .logo{
   border-right: 0.1px solid var(--border-color);
 }
@@ -68,6 +72,7 @@ i{
 .navbar-links a{
   text-transform: uppercase;
 }
+/*================= dropdown navbar ====================*/
 .dropdown-list {
     visibility: hidden;
     padding: 10px 0;
@@ -103,11 +108,15 @@ i{
 .icons-list{
   border-left:0.1px solid var(--border-color) ;
 }
+.icons{
+  display: none;
+}
+/*================= sidebar =====================*/
 .side-bar{
   z-index: 200;
   border-left: 1px solid var(--border-color);
   width: 25%;
-  right: -150%;
+  right: -200%;
   transition: all 0.3s;
 }
 .main-content{
@@ -129,15 +138,121 @@ i{
   background-color: var(--main-color);
   color: var(--border-color);
 }
-.icons{
-  display: none;
+/*............................. navbar end ......................................................................*/
+/*............................. header section start ............................................................*/
+.header-section{
+  background-image: url(../images/pngtree-texture-geometric-black-metal-gradient-image_17809.jpg);
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  justify-content: space-between;
 }
+.left-info, .right-info {
+  height: 70%;
+  display: flex;
+  align-items:baseline;
+  justify-content:space-around;
+  writing-mode: vertical-rl;
+}
+.scroll-down,.contact,.follow-me{
+  cursor: pointer;
+}
+.right-info i{
+  transition: all 0.4s ease;
+}
+.right-info i:hover{
+  color: var(--main-color);
+}
+.center-content h1 {
+  font-size: 6rem;
+}
+.availability{
+  width: 50%;
+}
+.availability p {
+  font-size: 1.4rem;
+}
+#arrow{
+  transform: rotate(-45deg);
+}
+.designer{
+  color: transparent;
+  -webkit-text-stroke: 0.5px white;
+  background: linear-gradient(to right, var(--main-color) 50%, transparent 50%);
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  animation: change 3s infinite alternate ease-in-out;
+}
+.header-image img{
+  width: 70%;
+}
+@keyframes change {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 0%;
+  }
+}
+.video-play i{
+  font-size: 1.5rem;
+  width: 3rem;
+  height: 3rem;
+  padding: 4%;
+  border: 1.2px solid var(--wite-color);
+  border-radius: 50%;
+ outline: 2px solid var(--wite-color);
+ animation: playvideo 2s infinite  ease-in-out;
+}
+.video-play img{
+  animation: rotate 2s infinite alternate ease-in-out;
+}
+.video-play p{
+  font-size: 1.2rem;
+}
+@keyframes playvideo {
+  0%{
+    outline: 2px solid var(--wite-color);
+    outline-offset: 0px;
+  }
+  100%{
+    outline-offset: 30px;
+    outline: 0px;
+  }
+}
+@keyframes rotate {
+  0%{
+    transform: rotateY(0deg);
+  }
+  100%{
+    transform: rotate(-20deg);
+  }
+}
+/*............................. header section end ............................................................*/
+/*................................... media queries start ......................................................*/
 @media screen and (max-width:1300px){
   #button-navbar{
     display: none;
   }
   .side-bar{
     width: 40%;
+  }
+  .left-info, .right-info{
+    display: none;
+  }
+  .center-content h1 {
+    font-size: 5rem;
+  }
+  .availability{
+    width: 60%;
+  }
+  .availability p {
+    font-size: 1.3rem;
+  }
+  .header-image img{
+    width: 80%;
   }
 }
 @media screen and (max-width:950px){
@@ -180,12 +295,52 @@ i{
   .side-bar{
     width: 50%;
   }
+  
+  .center-content h1 {
+    font-size: 3rem;
+  }
+  .availability{
+    width: 90%;
+  }
+  .availability p {
+    font-size: 1.1rem;
+  }
+  .header-image img{
+    width: 80%;
+  }
+  .video-play i{
+    font-size: 1.3rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: 4%;
+  }  
+  .video-play p{
+    font-size: 1rem;
+  }
 }
 @media screen and (max-width:500px){
   #button-navbar{
     display: none;
   }
   .side-bar{
-    width: 80%;
+    width: 85%;
+  }
+  .center-content{
+    padding-top: 20%;
+    width: 100%;
+  }
+  
+  .center-content h1 {
+    font-size: 3rem;
+  }
+  .availability p {
+    font-size: 1rem;
+  }
+  .header-section{
+    flex-direction: column;
+  }
+  .header-image img{
+    width: 65%;
+    transform: translateY(-20%);
   }
 }
