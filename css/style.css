@@ -7,19 +7,22 @@
 :root{
     --main-color:#C9F31D;
     --black-color:black;
-    --wite-color:white;
+    --white-color:white;
     --border-color:rgba(91, 91, 91, 0.91);
     --background-color-hover:#f1f1f1;
+    --color-section:#191618;
+    --color-section-div:#1D1D1D;
+    --color-pragrah:#8E8E8E;
 } 
 body{
     background-color:var(--black-color);
-    color: var(--wite-color);
+    color: var(--white-color);
     height: 5000px;
 }
 a{
   text-decoration: none;
   transition: all 0.3s ease-out;
-  color:var(--wite-color);
+  color:var(--white-color);
   display: block;
 }
 a:hover{
@@ -50,6 +53,21 @@ i{
   cursor: pointer;
 }
 /* .................... general styling end ...........................................................................*/
+/*============ anmitions ==========*/
+@keyframes zoomIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+@keyframes slideUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 /*...................... navbar start .................................................................................*/
 .navbar-content{
   background-color: var(--black-color);
@@ -141,7 +159,7 @@ i{
 /*............................. navbar end ......................................................................*/
 /*............................. header section start ............................................................*/
 .header-section{
-  background-image: url(../images/pngtree-texture-geometric-black-metal-gradient-image_17809.jpg);
+  background-image: url(../images/background-header.jpg);
   background-size:cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -188,6 +206,9 @@ i{
 .header-image img{
   width: 70%;
 }
+.header-image.show{
+  animation: zoomIn 1s ease forwards;
+}
 @keyframes change {
   0% {
     background-position: 0% 0%;
@@ -201,9 +222,9 @@ i{
   width: 3rem;
   height: 3rem;
   padding: 4%;
-  border: 1.2px solid var(--wite-color);
+  border: 1.2px solid var(--white-color);
   border-radius: 50%;
- outline: 2px solid var(--wite-color);
+ outline: 2px solid var(--white-color);
  animation: playvideo 2s infinite  ease-in-out;
 }
 .video-play img{
@@ -214,7 +235,7 @@ i{
 }
 @keyframes playvideo {
   0%{
-    outline: 2px solid var(--wite-color);
+    outline: 2px solid var(--white-color);
     outline-offset: 0px;
   }
   100%{
@@ -230,9 +251,120 @@ i{
     transform: rotate(-20deg);
   }
 }
+.video-header{
+  background-color: rgba(0, 0, 0,0.9);
+  z-index: 99999999;
+
+}
+.video-header .video-content{
+  width: 50%;
+  height: 50%;
+}
 /*............................. header section end ............................................................*/
+.slider-container {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  background-color:var(--main-color);
+  padding: 2% 0%;
+}
+
+.slider-track {
+  display: flex;
+  width: fit-content;
+  animation: scroll-left 10s linear infinite;
+}
+
+.slider-content {
+  display: inline-block;
+  padding-right: 50px; 
+}
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+/* ........................................................ about section start ...............................................*/
+.info-content p{
+  font-size: 2rem;
+}
+.links a{
+  margin: 0% 1%;
+  font-size: 1.1rem;
+  padding: 1% 2%;
+  background-color:var(--color-section);
+  border-radius: 8px;
+  color: var(--white-color);
+  transition: all 0.5s;
+}
+.links a.active{
+  background-color: var(--main-color);
+  color: var(--black-color);
+}
+.section{
+  background-color: var(--color-section);
+  margin: 6% 0%;
+}
+.about-image{
+  width: 70%;
+}
+.about-image img{
+  width: 100%;
+}
+.about-content p{
+  font-size: 1.2rem;
+  color: var(--color-pragrah);
+}
+.personal-info{
+  background-color: var(--color-section-div);
+}
+.personal-info:hover{
+  border: 1px solid var(--main-color);
+}
+.year{
+  color: var(--main-color);
+}
+.experience-content{
+  border-bottom:0.1px solid var(--border-color);
+  border-top:0.1px solid var(--border-color) ;
+  transition: all 0.1s;
+}
+.experience-content:hover{
+  border-bottom:0.1px solid var(--main-color);
+  border-top:0.1px solid var(--main-color) ;
+}
+.experience-content span{
+  font-size: 1.2rem;
+}
+.skills-percent{
+  font-size: 2rem;
+  font-weight: bolder;
+}
+
+.about-content {
+  animation: none;
+  transition: all 0.5s ease-in-out;
+}
+
+
+.about-content.show {
+  animation: slideUp 0.6s ease-out;
+}
+.about-image.show{
+  animation: zoomIn 1s ease forwards;
+}
+.personal-info.show{
+  animation: zoomIn 1s ease forwards;
+}
+/* ........................................................ about section end ...............................................*/
 /*................................... media queries start ......................................................*/
 @media screen and (max-width:1300px){
+  .navbar-content{
+    background-color: var(--black-color);
+  }
   #button-navbar{
     display: none;
   }
@@ -254,6 +386,19 @@ i{
   .header-image img{
     width: 80%;
   }
+  .slider-container{
+    padding: 1% 0%;
+  }
+  .section{
+    flex-direction: column;
+  }
+  .about-image{
+    width: 100%;
+    text-align: center;
+  }
+  .about-image img{
+    width: 40%;
+  }
 }
 @media screen and (max-width:950px){
   #button-navbar{
@@ -272,6 +417,7 @@ i{
     width: 55%;
   }
   .navbar-links{
+    background-color: var(--black-color);
     display: none;
     position: absolute;
     top: 100%;
@@ -317,6 +463,29 @@ i{
   .video-play p{
     font-size: 1rem;
   }
+  .video-header .video-content{
+    width: 80%;
+    height: 60%;
+  }
+  .image8{
+    width: 10%;
+  }
+  .about-content p{
+    font-size: 1rem;
+  }
+  .info-content p{
+    font-size: 1rem;
+  }
+  .links a{
+    font-size: 1rem;
+  }
+  .experience-content span,
+  .experience-content h3{
+    font-size: 1rem;
+  }
+  .skills-percent{
+    font-size: 1.5rem;
+  }
 }
 @media screen and (max-width:500px){
   #button-navbar{
@@ -326,7 +495,7 @@ i{
     width: 85%;
   }
   .center-content{
-    padding-top: 20%;
+    padding-top: 25%;
     width: 100%;
   }
   
@@ -340,7 +509,14 @@ i{
     flex-direction: column;
   }
   .header-image img{
-    width: 65%;
-    transform: translateY(-20%);
+    width: 60%;
+    transform: translateY(-25%);
+  }
+  .video-header .video-content{
+    width: 100%;
+    height: 70%;
+  }
+  .skills-percent{
+    font-size: 1.3rem;
   }
 }

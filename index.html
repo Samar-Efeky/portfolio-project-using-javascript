@@ -6,39 +6,45 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <script src="bootstrap.bundle.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <!-- ===================================== navigation bar ============================================ -->
    <nav id="navbar" class="w-100">
    </nav>
+   <!-- ====================================== first section ============================================== -->
    <header>
     <div class="header-section w-100 vh-100 d-flex  align-items-center ">
+        <!-- =========== left information ============== -->
         <div class="left-info px-2 my-5">
             <img src="images/image1.png" class="contact" alt="">
             <div class="contact">
                 <span>(+20) 1207-752-327</span>
-            </div> <!-- contact -->
+            </div>
             <div class="scroll-down pt-5">
                 <span>SCROLL DOWN</span>
-            </div> <!-- scroll-down -->
+            </div>
             <img src="images/image2.png" class="scroll-down w-50" alt="">
-        </div> <!-- left-info -->
+        </div> 
+        <!-- ============= header content ============ -->
         <div class="center-content p-lg-4 ps-3 ">
             <div class="availability ">
               <p ><a href="#">Currently Available For Freelance Worldwide<i id="arrow" class="fa-solid fa-arrow-right px-2"></i></a></p>
               <hr>
-            </div> <!-- availability -->
+            </div>
             <h1 class="fw-bolder">Creative Visual <br><span class="designer">Designer</span></h1>
             <div class="video-play d-flex my-5">
                 <img src="images/image3.png" class="mx-2" alt="">
                 <i class="fa-solid fa-play mx-4 d-flex justify-content-center align-items-center"></i>
                 <p class="mx-2 mt-2">Work <br>Process</p>
-            </div> <!-- video-play -->
-        </div> <!-- center-content -->
-        <div class="header-image  text-end px-4">
-            <img src="images/header-image.png" class="" alt="">
-        </div> <!-- header-image -->
+            </div>
+        </div>
+        <!-- ================ header image ================== -->
+        <div class="header-image show-section  text-end px-4">
+            <img src="images/header-image.png"  alt="matias">
+        </div>
+        <!-- ============== right information ================== -->
         <div class="right-info px-2 my-5 pe-5">
             <div class="follow-me">
                 <span>FOLLOW ME</span>
@@ -48,9 +54,243 @@
             <i class="fa-brands fa-twitter"></i>
             <i class="fa-brands fa-linkedin"></i>
             <i class="fa-brands fa-youtube"></i>
-        </div> <!-- right-info -->
-    </div> <!-- header-section -->
+        </div>
+    </div>
+    <!-- ================= header video ==================== -->
+    <div class="video-header position-fixed top-0 start-0 bottom-0 end-0 d-none justify-content-center align-items-center">
+        <div class="position-absolute top-0 end-0 p-3">
+            <i id="close-video" class="fa-solid fa-xmark "></i>
+        </div>
+        <div class="video-content">
+            <video class="w-100 h-100" controls>
+                <source src="videos/20240716_053707.mp4" type="video/ogg">
+                <source src="videos/20240716_053707.mp4" type="video/mp4">
+            </video>
+        </div>
+    </div>
    </header>
+   <!-- ======================================== slider ================================================== -->
+   <div class="slider-container">
+    <div class="slider-track w-100">
+        <div class="slider-content">
+          <img src="images/image4.png" alt="">
+          <img src="images/image5.png" alt="">
+          <img src="images/image6.png" alt="">
+          <img src="images/image7.png" alt="">
+        </div>
+        <div class="slider-content">
+            <img src="images/image4.png" alt="">
+            <img src="images/image5.png" alt="">
+            <img src="images/image6.png" alt="">
+            <img src="images/image7.png" alt=""> 
+        </div>
+    </div>
+   </div>
+   <!-- ========================================== about section ======================================================== -->
+    <section id="information-section">
+        <div class="text-center about py-3 container-lg">
+            <div class="info-content">
+                <img src="images/image8.png" class="image8 mt-5" alt="">
+                <p class="my-5 px-4">I'm David Matias, I'm a Brand & Webflow Designer, Currently residing in the lush Victoria Street London, Matias operates globally and is ready to take on any design challenge.</p>
+                <nav class="links d-flex  justify-content-center">
+                    <a href="#about" >ABOUT</a>
+                    <a href="#experience">EXPERIENCE</a>
+                    <a href="#eduction" >EDUCTION</a>
+                    <a href="#skills">SKILLS</a>
+                </nav>
+                <section  class="section d-flex rounded-3">
+                    <div class="about-image show-section  p-2">
+                        <img src="images/about-image.png"  alt="">
+                    </div>
+                    <!-- ============== section about ============= -->
+                    <div id="about" class="about-content  p-md-5 p-2 d-block">
+                        <div class="row">
+                            <div class="col-12 text-start">
+                                <div>
+                                    <h2>Personal Info</h2>
+                                    <p class="py-3">Neque porro quisquam est, qui dolorem ipsum quia dolor sit consectetur,
+                                        aliquam quaerats voluptatem. Ut enim ad minima veniam, exercitationem laboriosam, 
+                                        nisi ut aliquid ex ea autem velit esse quam nihil
+                                    </p>
+                                </div>
+                            </div>
+                            <div class=" col-md-6 col-12 p-3">
+                                <div class="personal-info show-section p-4 text-start h-100 rounded-3">
+                                    <span class="main-content fw-bolder text-uppercase">email</span>
+                                    <p class="py-2"><a class="text-white" href="mailto:samarelfeky69@gmail.com">samarelfeky69@gmail.com</a></p> 
+                                </div>  
+                            </div>
+                            <div class=" col-md-6 col-12 p-3">
+                                <div class="personal-info show-section p-4 text-start h-100 rounded-3">
+                                    <span class="main-content fw-bolder text-uppercase">phone</span>
+                                    <p class="text-white h6 py-2">+2012 0775 2327</p> 
+                                </div>  
+                            </div>
+                            <div class="col-md-6 col-12 p-3">
+                                <div class="personal-info show-section p-4 text-start h-100 rounded-3">
+                                    <span class="main-content fw-bolder text-uppercase">address</span>
+                                    <p class="text-white h6 py-2">Nasr City, Egypt.</p> 
+                                </div>  
+                            </div>
+                            <div class=" col-md-6 col-12 p-3">
+                                <div class="personal-info show-section p-4 text-start h-100 rounded-3">
+                                    <span class="main-content fw-bolder text-uppercase">follow</span>
+                                    <p class="text-white h6 py-2">
+                                        <i class="fa-brands fa-facebook px-1"></i>
+                                        <i class="fa-brands fa-twitter px-1"></i>
+                                        <i class="fa-brands fa-linkedin px-1"></i>
+                                        <i class="fa-brands fa-youtube px-1"></i>
+                                    </p> 
+                                </div>  
+                            </div>
+                        </div>
+                    </div> <!-- about-content -->
+                    <!-- ================= experience section ====================== -->
+                    <div id="experience" class="about-content p-md-5 p-5 d-none">
+                        <div class=" text-start">
+                            <div>
+                                <h2>My Experience</h2>
+                                <p class="py-3">Neque porro quisquam est, qui dolorem ipsum quia dolor sit consectetur,
+                                    aliquam quaerats voluptatem. Ut enim ad minima veniam, exercitationem laboriosam, 
+                                    nisi ut aliquid ex ea autem velit esse quam nihil
+                                </p>
+                            </div>
+                            <div class="experience-content d-flex justify-content-between p-2 py-4">
+                                <span class="year">In 2011</span>
+                                <div>
+                                    <h3>Software Engineer</h3>
+                                    <span class="main-content py-2">UI Head & Manager</span>
+                                </div>
+                            </div> <!-- experience-content -->
+                            <div class="experience-content d-flex justify-content-between p-2 py-4">
+                                <span class="year">In 2016</span>
+                                <div>
+                                    <h3>Product Designer</h3>
+                                    <span class="main-content py-2">Head of Department</span>
+                                </div>
+                            </div> <!-- experience-content -->
+                            <div class="experience-content d-flex justify-content-between p-2 py-4">
+                                <span class="year">In 2023</span>
+                                <div>
+                                    <h3>Senior UI Designer</h3>
+                                    <span class="main-content py-2">UPWork.com</span>
+                                </div>
+                            </div> <!-- experience-content -->
+                        </div>
+                    </div> <!-- about-content -->
+                    <!-- ================ eduction section ================== -->
+                    <div id="eduction" class="about-content p-md-5 p-3  d-none">
+                        <div class=" text-start">
+                            <div>
+                                <h2>My Education</h2>
+                                <p class="py-3">Neque porro quisquam est, qui dolorem ipsum quia dolor sit consectetur,
+                                    aliquam quaerats voluptatem. Ut enim ad minima veniam, exercitationem laboriosam, 
+                                    nisi ut aliquid ex ea autem velit esse quam nihil
+                                </p>
+                            </div>
+                            <div class="experience-content d-flex justify-content-between p-2 py-4">
+                                <span class="year">2011-2013</span>
+                                <div>
+                                    <h3>Programming Course</h3>
+                                    <span class="main-content py-2">New York University</span>
+                                </div>
+                            </div> <!-- experience-content -->
+                            <div class="experience-content d-flex justify-content-between p-2 py-4">
+                                <span class="year">2013-2016</span>
+                                <div>
+                                    <h3>University of Design</h3>
+                                    <span class="main-content py-2">Kingston, United States</span>
+                                </div>
+                            </div> <!-- experience-content -->
+                            <div class="experience-content d-flex justify-content-between p-2 py-4">
+                                <span class="year">2016-2018</span>
+                                <div>
+                                    <h3>Web Design Course</h3>
+                                    <span class="main-content py-2">New York University</span>
+                                </div>
+                            </div> <!-- experience-content -->
+                        </div>
+                    </div> <!-- about-content -->
+                    <!-- ============== skills section -->
+                    <div id="skills" class="about-content p-md-5 p-2 d-none ">
+                        <div class="row">
+                            <div class="col-12 text-start">
+                                <div>
+                                    <h2>My Skills</h2>
+                                    <p class="py-3">Neque porro quisquam est, qui dolorem ipsum quia dolor sit consectetur,
+                                        aliquam quaerats voluptatem. Ut enim ad minima veniam, exercitationem laboriosam, 
+                                        nisi ut aliquid ex ea autem velit esse quam nihil
+                                    </p>
+                                </div>
+                            </div>
+                            <div class=" col-md-6 col-12 p-3">
+                                <div class="personal-info show-section p-4 text-start h-100 rounded-3 d-flex justify-content-between">
+                                    <div>
+                                        <img src="images/figma.png" class="w-100" alt="">
+                                    </div>
+                                    <div class="text-center">
+                                        <p class=" fw-bolder text-uppercase">Figma</p>
+                                        <span class="py-2 skills-percent">90%</span> 
+                                    </div>
+                                </div>  
+                            </div>
+                            <div class=" col-md-6 col-12 p-3">
+                                <div class="personal-info show-section p-4 text-start h-100 rounded-3 d-flex justify-content-between">
+                                    <div>
+                                        <img src="images/wordpress.png" class="w-100" alt="">
+                                    </div>
+                                    <div class="text-center">
+                                        <p class=" fw-bolder text-uppercase">wordpress</p>
+                                        <span class="py-2 skills-percent">95%</span> 
+                                    </div>
+                                </div>  
+                            </div>
+                            <div class=" col-md-6 col-12 p-3">
+                                <div class="personal-info show-section p-4 text-start h-100 rounded-3 d-flex justify-content-between">
+                                    <div>
+                                        <img src="images/html.png" class="w-100" alt="">
+                                    </div>
+                                    <div class="text-center">
+                                        <p class=" fw-bolder text-uppercase">html</p>
+                                        <span class="py-2 skills-percent">100%</span> 
+                                    </div>
+                                </div>  
+                            </div>
+                            <div class=" col-md-6 col-12 p-3">
+                                <div class="personal-info show-section p-4 text-start h-100 rounded-3 d-flex justify-content-between">
+                                    <div>
+                                        <img src="images/bootstrap.png" class="w-100" alt="">
+                                    </div>
+                                    <div class="text-center">
+                                        <p class=" fw-bolder text-uppercase">bootstrap</p>
+                                        <span class="py-2 skills-percent">97%</span> 
+                                    </div>
+                                </div>  
+                            </div>
+                          
+                        </div>
+                    </div> <!-- about-content -->
+                </section>
+            </div>
+        </div>
+    </section>
+    <!-- ======================================== slider ================================================== -->
+   <div class="slider-container">
+    <div class="slider-track w-100">
+        <div class="slider-content">
+          <img src="images/image9.png" alt="">
+          <img src="images/image10.png" alt="">
+          <img src="images/image11.png" alt="">
+          <img src="images/image12.png" alt="">
+        </div>
+        <div class="slider-content">
+          <img src="images/image9.png" alt="">
+          <img src="images/image10.png" alt="">
+          <img src="images/image11.png" alt="">
+          <img src="images/image12.png" alt="">
+        </div>
+    </div>
+   </div>
     <script type="module" src="script.js"></script>
 </body>
 </html>
