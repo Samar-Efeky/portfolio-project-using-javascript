@@ -52,6 +52,9 @@ i{
   font-size: 1.2rem;
   cursor: pointer;
 }
+p{
+  font-size: 1.2rem;
+}
 /* .................... general styling end ...........................................................................*/
 /*============ anmitions ==========*/
 @keyframes zoomIn {
@@ -360,6 +363,26 @@ i{
   animation: zoomIn 1s ease forwards;
 }
 /* ........................................................ about section end ...............................................*/
+.our-awards{
+  background-color: var(--color-section);
+}
+.our-awards h2{
+  font-size: 3rem;
+}
+.our-awards p,
+.our-awards a{
+  font-size: 1.2rem;
+}
+.our-awards div{
+  border-bottom: 0.1px solid var(--border-color);
+}
+.title-award{
+  color: var(--main-color);
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.our-awards.show{
+  animation: slideUp 2s ease-out;
+}
 /*................................... media queries start ......................................................*/
 @media screen and (max-width:1300px){
   .navbar-content{
@@ -399,12 +422,15 @@ i{
   .about-image img{
     width: 40%;
   }
+  .our-awards h2{
+    font-size: 2.5rem;
+  }
 }
 @media screen and (max-width:950px){
   #button-navbar{
     display: block;
   }
-  i{
+  i,p{
     font-size: 1rem;
   }
   button{
@@ -485,6 +511,16 @@ i{
   }
   .skills-percent{
     font-size: 1.5rem;
+  }
+  .our-awards h2{
+    font-size: 2rem;
+  }
+  .our-awards div{
+    flex-direction: column;
+  }
+  .our-awards p,
+  .our-awards a{
+    font-size: 1.1rem;
   }
 }
 @media screen and (max-width:500px){

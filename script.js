@@ -32,8 +32,6 @@ document.addEventListener("DOMContentLoaded", () => {
         entry.target.classList.remove('show');
       }
     });
-  }, {
-    threshold: 0.3, // يعني يبدأ الأنيميشن لما 20% من العنصر يظهر
   });
   
   sectionView.forEach(section => {
