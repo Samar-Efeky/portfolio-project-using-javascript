@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Lilita+One&display=swap');
 /* .................... general styling start...........................................................................*/
 *{
     margin: 0;
@@ -13,11 +14,20 @@
     --color-section:#191618;
     --color-section-div:#1D1D1D;
     --color-pragrah:#8E8E8E;
+    --bg-section:#15161A;
+    
 } 
+::-webkit-scrollbar {
+  width: 8px; 
+}
+::-webkit-scrollbar-thumb {
+  background:var(--main-color);
+  border-radius: 6px;
+}
+
 body{
     background-color:var(--black-color);
     color: var(--white-color);
-    height: 5000px;
 }
 a{
   text-decoration: none;
@@ -55,6 +65,41 @@ i{
 p{
   font-size: 1.2rem;
 }
+/*============= arrow icon rotate ============*/
+.work-icon{
+  background-color: var(--color-section-div);
+  height: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.work-icon i{
+  transform: rotate(45deg);
+}
+/*============= circle button ==============*/
+.circle-button{
+  width: 200px;
+  height: 200px;
+  background-color: var(--main-color);
+  color: var(--black-color);
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+}
+.circle-button::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 1px solid var(--main-color);
+  border-radius: 50%;
+  top: 8px;
+  left: -8px;
+  z-index: -1;
+  transition: all 0.6s ease;
+}
+.circle-button:hover::before{
+  top:-10px;
+}
 /* .................... general styling end ...........................................................................*/
 /*============ anmitions ==========*/
 @keyframes zoomIn {
@@ -70,6 +115,45 @@ p{
     transform: translateY(0);
     opacity: 1;
   }
+}
+@keyframes slideDown {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes rotateXAnim {
+  0% {
+    transform: rotateX(180deg);
+  }
+  100% {
+    transform: rotateX(0deg);
+  }
+}
+/*======================= section title and Pragraph ================*/
+.title-section h2{
+  font-size: 2rem;
+  font-family: "Caveat", cursive;
+  color: var(--main-color);
+}
+.title-section p{
+  font-size: 3.5rem;
+  width: 70%; 
+}
+.title-section p.show{
+  animation: slideUp 1.5s ease forwards;
+}
+.title-line{
+  width: 6%;
+  height: 2px;
+  background-color: var(--main-color);
+}
+.main-title-section.show{
+  animation: slideDown 1.5s ease forwards;
 }
 /*...................... navbar start .................................................................................*/
 .navbar-content{
@@ -294,6 +378,9 @@ p{
 .info-content p{
   font-size: 2rem;
 }
+.info-content p.show{
+  animation: slideUp 2s ease forwards;
+}
 .links a{
   margin: 0% 1%;
   font-size: 1.1rem;
@@ -356,13 +443,12 @@ p{
 .about-content.show {
   animation: slideUp 0.6s ease-out;
 }
-.about-image.show{
-  animation: zoomIn 1s ease forwards;
-}
+.about-image.show,
 .personal-info.show{
   animation: zoomIn 1s ease forwards;
 }
 /* ........................................................ about section end ...............................................*/
+/*.............................................. our awards secton start ....................................................*/
 .our-awards{
   background-color: var(--color-section);
 }
@@ -383,8 +469,157 @@ p{
 .our-awards.show{
   animation: slideUp 2s ease-out;
 }
+/*.............................................. our awards secton end ....................................................*/
+/*.............................................. work secton start ....................................................*/
+.work-content span{
+  color: var(--main-color);
+  font-size: 1.3rem;
+}
+.work-content{
+  cursor: pointer;
+}
+.work-content p{
+  font-size: 1.7rem;
+}
+.work-content:hover .work-icon{
+  background-color: var(--main-color);
+  color: var(--black-color);
+}
+/*.............................................. work secton end ....................................................*/
+/*.............................................. services secton start ....................................................*/
+.special-services,.working-process{
+  background-color: var(--bg-section);
+}
+.service-content{
+  border-bottom: 0.1px solid var(--border-color);
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3 ease;
+}
+.service-content.show{
+  animation: slideUp 1s ease-out;
+}
+.service-content span{
+  font-size: 1.3rem;
+}
+.service-pargragh{
+  width: 50%;
+  color: var(--color-pragrah);
+}
+.service-title{
+  font-size: 2rem;
+  transition: all 0.3s ease;
+}
+.service-content:hover .work-icon{
+  background-color: var(--main-color);
+  color: var(--black-color);
+}
+.service-content:hover .service-title{
+  color: var(--main-color);
+}
+.service-content:hover{
+  border-bottom:0.1px solid var(--main-color) ;
+}
+/*.............................................. services secton end ....................................................*/
+.work-together{
+  font-size: 1.2rem;
+  border-bottom:0.1px solid var(--border-color);
+}
+.work-together.show{
+  animation: slideUp 1s ease-out;
+}
+.work-together i{
+  background-color: var(--main-color);
+  font-size: 1.3rem;
+}
+.work-together span{
+  color: var(--color-pragrah);
+}
+.work-together-image img{
+  width: 75%;
+}
+.work-together-image img.show{
+  animation: zoomIn 1s ease forwards;
+}
+.card{
+  color: var(--color-pragrah);
+  background-color: transparent;
+  border: 0.1px solid var(--border-color);
+  transition: all 0.3s ease;
+}
+.card.show{
+  animation: rotateXAnim 0.5s ease;
+  backface-visibility: hidden;
+}
+.card ul li {
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 25px;
+}
+
+.card ul li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 6px;
+  width: 10px;
+  height: 10px;
+  background-color:var(--main-color);
+  border-radius: 50%;
+}
+.corner {
+  width: 50px;
+  height: 50px;
+  background-color: var(--black-color);
+  border-top-left-radius: 100%;
+  transition: all 0.4s ease;
+}
+.card:hover .corner{
+  background-color: var(--main-color);
+}
+.card:hover{
+  border: 0.1px solid var(--main-color);
+}
+.footer-section h2{
+  font-size: 8.5rem;
+  border: 0.5px solid var(--border-color);
+}
+.footer-section h2.show{
+  animation: slideUp 2s ease forwards;
+}
+.footer-section a{
+  font-size: 2.5rem;
+  color: var(--main-color);
+}
+.footer-facebook.show{
+  animation: zoomIn 0.5s ease forwards;
+}
+.footer-facebook{
+  border: 0.1px solid var(--border-color);
+  transition: all 0.3s ease-in;
+}
+.footer-facebook:hover,
+.scroll-top{
+  background-color: var(--main-color);
+  color: black;
+  cursor: pointer;
+}
+.copy-right-section{
+  background-color: var(--color-section);
+}
+.copy-right-author{
+  color: var(--main-color);
+}
 /*................................... media queries start ......................................................*/
 @media screen and (max-width:1300px){
+  /*======================= section title and Pragraph ================*/
+.title-section h2{
+  font-size: 1.8rem;
+}
+.title-section p{
+  font-size: 3.2rem;
+  width: 70%; 
+}
   .navbar-content{
     background-color: var(--black-color);
   }
@@ -425,15 +660,48 @@ p{
   .our-awards h2{
     font-size: 2.5rem;
   }
+  .footer-section h2{
+    font-size: 7.5rem;
+  }
+  .footer-section a{
+    font-size: 2rem;
+  }
+  .scroll-top{
+    margin: 2% 0%;
+  }
+  .service-content span{
+    font-size: 1.1rem;
+  }
+  .service-pargragh{
+    width: 50%;
+    color: var(--color-pragrah);
+  }
+  .service-title{
+    font-size: 1.3rem;
+    transition: all 0.3s ease;
+  }
+  .work-together-image img{
+    width: 50%;
+  }
 }
 @media screen and (max-width:950px){
+  .circle-button{
+    width: 150px;
+    height: 150px;
+  }
+  /*======================= section title and Pragraph ================*/
+.title-section h2{
+  font-size: 1.5rem;
+}
+.title-section p{
+  font-size: 2.5rem;
+  width: 90%; 
+}
   #button-navbar{
     display: block;
   }
-  i,p{
-    font-size: 1rem;
-  }
-  button{
+  i,p,button,
+  .video-play p,.about-content p{
     font-size: 1rem;
   }
   .icons-list{
@@ -486,9 +754,6 @@ p{
     height: 2.5rem;
     padding: 4%;
   }  
-  .video-play p{
-    font-size: 1rem;
-  }
   .video-header .video-content{
     width: 80%;
     height: 60%;
@@ -496,15 +761,8 @@ p{
   .image8{
     width: 10%;
   }
-  .about-content p{
-    font-size: 1rem;
-  }
-  .info-content p{
-    font-size: 1rem;
-  }
-  .links a{
-    font-size: 1rem;
-  }
+  .info-content p,
+  .links a,
   .experience-content span,
   .experience-content h3{
     font-size: 1rem;
@@ -522,8 +780,44 @@ p{
   .our-awards a{
     font-size: 1.1rem;
   }
+  .work-content span{
+    font-size: 1.1rem;
+  }
+  .work-content p{
+    font-size: 1.4rem;
+  }
+  .service-content span{
+    font-size: 1rem;
+  }
+  .service-pargragh{
+    width: 50%;
+    color: var(--color-pragrah);
+  }
+  .service-title{
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+  }
+  .footer-section h2{
+    font-size: 5rem;
+  }
+  .footer-section a{
+    font-size: 1.8rem;
+  }
+  .work-together-image img{
+    width: 60%;
+  }
+
 }
 @media screen and (max-width:500px){
+  /*======================= section title and Pragraph ================*/
+  .title-section h2{
+    font-size: 1.5rem;
+  }
+  .title-section p{
+    font-size: 2rem;
+    width: 100%; 
+  }
+
   #button-navbar{
     display: none;
   }
@@ -554,5 +848,36 @@ p{
   }
   .skills-percent{
     font-size: 1.3rem;
+  }
+  .work-content span{
+    font-size: 1rem;
+  }
+  .work-content p{
+    font-size: 1.2rem;
+  }
+  .service-content{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+ .service-pargragh{
+  width: 100%;
+ }
+  .service-content div,
+  .service-content p,
+  .service-content a{
+    margin: 1% 0%;
+  }
+  .footer-section h2{
+    font-size: 4rem;
+  }
+  .footer-section a{
+    font-size: 1.5rem;
+  }
+  .work-together,
+  .work-together i{
+    font-size: 1rem;
+  }
+  .work-together-image img{
+    width: 80%;
   }
 }

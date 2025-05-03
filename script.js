@@ -7,8 +7,8 @@ document.addEventListener("DOMContentLoaded", () => {
       .then(data => {
         document.getElementById("navbar").innerHTML = data;
         navbar();  
-        aboutSection();
     });  
+    aboutSection();
     // header video play .........................................................//
     (function(){
         let videoHeader=document.querySelector(".video-header");
@@ -22,18 +22,45 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     })();
   });
-  let sectionView=document.querySelectorAll(".show-section");
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('show');
-      }
-      else {
-        entry.target.classList.remove('show');
-      }
+  function setupObserver(){
+    let sectionView = document.querySelectorAll(".show-section");
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        } else {
+          entry.target.classList.remove('show');
+        }
+      });
     });
-  });
   
-  sectionView.forEach(section => {
-    observer.observe(section);
-  });
+    sectionView.forEach(section => {
+      observer.observe(section);
+    });
+  }
+  fetch("footer.html")
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById("footer").innerHTML = data;
+    let currentYear=new Date().getFullYear();
+    document.querySelector(".copy-right-year").innerHTML=currentYear;
+    scrollToPageTop();
+    setupObserver();
+   
+});  
+function scrollToPageTop(){
+  document.querySelector(".scroll-top").addEventListener("click",()=>{
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  })
+}
+fetch("business.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("Business").innerHTML = data; 
+        setupObserver();
+});  
+
+
