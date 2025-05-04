@@ -22,22 +22,29 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     })();
   });
-  function setupObserver(){
-    let sectionView = document.querySelectorAll(".show-section");
+  function setupObserver() {
+    const sectionView = document.querySelectorAll(".show-section");
+  
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
-        if (entry.isIntersecting) {
+        const ratio = entry.intersectionRatio;
+  
+        if (entry.isIntersecting && ratio === 1) {
           entry.target.classList.add('show');
-        } else {
+        } 
+        else if (ratio < 0.2) {
           entry.target.classList.remove('show');
         }
       });
+    }, {
+      threshold: Array.from({ length: 101 }, (_, i) => i / 100) 
     });
   
     sectionView.forEach(section => {
       observer.observe(section);
     });
   }
+  
   fetch("footer.html")
   .then(response => response.text())
   .then(data => {
