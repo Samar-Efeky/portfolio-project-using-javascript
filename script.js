@@ -1,5 +1,7 @@
 import {aboutSection} from "./js/about.module.js";
 import { navbar } from "./js/navbar.module.js";
+import { testimonial } from "./js/testimonial.module.js";
+import { workImage } from "./js/work.module.js";
 document.addEventListener("DOMContentLoaded", () => {
     // navigation bar ...........................................................//
     fetch("navbar.html")
@@ -70,4 +72,5 @@ fetch("business.html")
         setupObserver();
 });  
 
-
+testimonial();
+workImage();

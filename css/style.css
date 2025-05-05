@@ -15,15 +15,15 @@
     --color-section-div:#1D1D1D;
     --color-pragrah:#8E8E8E;
     --bg-section:#15161A;
-    
+    --star-color:#ffc107;
 } 
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
   width: 8px; 
 }
 ::-webkit-scrollbar-thumb {
   background:var(--main-color);
   border-radius: 6px;
-}
+} */
 
 body{
     background-color:var(--black-color);
@@ -65,6 +65,9 @@ i{
 p{
   font-size: 1.2rem;
 }
+.color-section{
+  background-color: var(--bg-section);
+}
 /*============= arrow icon rotate ============*/
 .work-icon{
   background-color: var(--color-section-div);
@@ -92,13 +95,21 @@ p{
   height: 100%;
   border: 1px solid var(--main-color);
   border-radius: 50%;
-  top: 8px;
-  left: -8px;
-  z-index: -1;
+  top: 3%;
+  left: -3%;
+  z-index: 1;
   transition: all 0.6s ease;
 }
 .circle-button:hover::before{
   top:-10px;
+}
+#lightBoxContainer{
+  background-color: rgba(0, 0, 0,0.8);
+  z-index: 999;
+
+}
+#lightBoxItem{
+  width: 50%;
 }
 /* .................... general styling end ...........................................................................*/
 /*============ anmitions ==========*/
@@ -125,6 +136,18 @@ p{
     transform: translateY(0);
     opacity: 1;
   }
+}
+@keyframes rotate {
+  0%{
+    transform: rotateY(0deg);
+  }
+  100%{
+    transform: rotate(-20deg);
+  }
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 /*======================= section title and Pragraph ================*/
 .title-section h2{
@@ -322,14 +345,6 @@ p{
     outline: 0px;
   }
 }
-@keyframes rotate {
-  0%{
-    transform: rotateY(0deg);
-  }
-  100%{
-    transform: rotate(-20deg);
-  }
-}
 .video-header{
   background-color: rgba(0, 0, 0,0.9);
   z-index: 99999999;
@@ -387,7 +402,7 @@ p{
   color: var(--black-color);
 }
 .section{
-  background-color: var(--color-section);
+
   margin: 6% 0%;
 }
 .about-image{
@@ -441,9 +456,6 @@ p{
 }
 /* ........................................................ about section end ...............................................*/
 /*.............................................. our awards secton start ....................................................*/
-.our-awards{
-  background-color: var(--color-section);
-}
 .our-awards h2{
   font-size: 3rem;
 }
@@ -479,16 +491,13 @@ p{
 }
 /*.............................................. work secton end ....................................................*/
 /*.............................................. services secton start ....................................................*/
-.special-services,.working-process{
-  background-color: var(--bg-section);
-}
 .service-content{
   border-bottom: 0.1px solid var(--border-color);
   justify-content: space-between;
   align-items: center;
   transition: all 0.3 ease;
 }
-.service-content.show{
+.service-title.show{
   animation: slideUp 1s ease-out;
 }
 .service-content span{
@@ -572,12 +581,69 @@ p{
   border: 0.1px solid var(--main-color);
 }
 /*............................................ work together secton end ................................................*/
+/*............................................ testimonial section start ...............................................*/
+.customers-slider{
+  overflow: hidden;
+}
+.image-rotate{
+  animation: rotate 2s infinite alternate ease-in-out;
+}
+.swiper-slide {
+  line-height: 1.6;
+  animation: fadeIn 0.5s ease;
+}
+.quote.show{
+  animation: slideUp 0.8s ease-out;
+}
+.stars {
+  color: #ffc107;
+}
+.name {
+  font-weight: bold;
+  color: var(--main-color);
+  font-size: 1.8rem;
+}
+
+.role {
+  color:var(--color-pragrah);
+  font-size: 1.3rem;
+}
+
+.swiper-pagination-bullet {
+  background:var(--color-pragrah);
+}
+
+.swiper-pagination-bullet-active {
+  background:var(--main-color);
+}
 .more-companies p.show{
   animation: slideDown 1.5s ease forwards;
 }
 .more-companies img:hover{
   background-color: var(--color-section);
   border-radius: 8px;
+}
+/*............................................ testimonial section end ...............................................*/
+.show-icon{
+  border: 0.1px solid var(--white-color);
+  font-size: 1rem;
+  transition: all 0.4s ease;
+}
+.posts span{
+  color: var(--color-pragrah);
+  font-size: 1.1rem;
+}
+.posts .service-content:hover .show-icon{
+  color: var(--main-color);
+  border-color:var(--main-color) ;
+}
+.post-img{
+  width: 25%;
+  opacity: 0;
+  transition: all 0.5s ;
+}
+.posts .service-content:hover .post-img{
+  opacity: 1;
 }
 /*............................................ footer section start .....................................................*/
 .footer-section h2{
@@ -690,6 +756,9 @@ p{
     width: 150px;
     height: 150px;
   }
+  #lightBoxItem{
+    width: 70%;
+  }
   /*======================= section title and Pragraph ================*/
 .title-section h2{
   font-size: 1.5rem;
@@ -801,6 +870,24 @@ p{
   .work-together-image img{
     width: 60%;
   }
+  .customers-slider{
+    width: 90%;
+    margin: auto;
+  }
+  .swiper{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(22, 22, 24,0.9);
+  }
+  .role{
+    color: var(--white-color);
+  }
+  .post-img{
+    width: 30%;
+  }
   .footer-section h2{
     font-size: 5rem;
   }
@@ -809,6 +896,9 @@ p{
   }
 }
 @media screen and (max-width:500px){
+  #lightBoxItem{
+    width: 80%;
+  }
   /*======================= section title and Pragraph ================*/
   .title-section h2{
     font-size: 1.5rem;
@@ -873,6 +963,18 @@ p{
   }
   .work-together-image img{
     width: 80%;
+  }
+  .name {
+    font-size: 1.5rem;
+  }
+  .customers-slider{
+    width: 100%;
+  }
+  .post-img{
+    text-align: center;
+    width: 75%;
+    padding: 5% 0%;
+    opacity: 1;
   }
   .footer-section h2{
     font-size: 4rem;

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <script src="js/bootstrap.bundle.min.js"></script>
@@ -98,7 +99,7 @@
                     <a href="#eduction" >EDUCTION</a>
                     <a href="#skills">SKILLS</a>
                 </nav>
-                <section  class="section d-flex rounded-3">
+                <section  class="section color-section d-flex rounded-3">
                     <div class="about-image show-section  p-2">
                         <img src="images/about-image.png"  alt="">
                     </div>
@@ -293,7 +294,7 @@
    </div>
    <!-- ====================================== our awards ================================================= -->
     <section>
-        <div class="our-awards show-section container-fluid  p-lg-5 px-2 py-5">
+        <div class="our-awards color-section show-section container-fluid  p-lg-5 px-2 py-5">
             <div class=" d-flex justify-content-between  p-lg-5 ">
                 <h2 class="fw-bolder">Our Awards</h2>
                 <a class="my-3 text-decoration-underline " href="#">View My Work</a>
@@ -322,7 +323,7 @@
     </section>
     <!-- ========================================= work section ============================================ -->
      <section>
-        <div class="work-section w-100 my-5">
+        <div class="work-section w-100 my-5 ">
             <div class="title-section text-center p-lg-5 p-2">
                 <div class="main-title-section show-section d-flex justify-content-center">
                     <div class="title-line m-3"></div>
@@ -332,9 +333,9 @@
                 <p class="px-md-5 py-3 m-auto show-section">Look at my portfolio and give me your feedback</p>
             </div>
            <div class="container">
-            <div class="row  w-100 p-lg-5 p-0 ">
+            <div class="row  p-lg-5 p-0 ">
                 <div class="col-md-6  p-md-3 ">
-                    <div class="work-content w-100 h-100">
+                    <div class="work-content work-image-click w-100 h-100">
                         <img src="images/work-image1.png" class="w-100" alt="">
                         <div class="d-flex justify-content-between py-4">
                             <div>
@@ -348,7 +349,7 @@
                     </div>
                 </div>
                 <div class="col-md-6 p-md-3">
-                    <div class="work-content h-100">
+                    <div class="work-content work-image-click w-100 h-100">
                         <img src="images/work-image2.png" class="w-100" alt="">
                         <div class="d-flex justify-content-between py-4">
                             <div>
@@ -362,7 +363,7 @@
                     </div>
                 </div>
                 <div class="col-md-6 p-md-3">
-                    <div class="work-content h-100">
+                    <div class="work-content work-image-click  w-100 h-100">
                         <img src="images/work-image3.png" class="w-100" alt="">
                         <div class="d-flex justify-content-between py-4">
                             <div>
@@ -376,7 +377,7 @@
                     </div>
                 </div>
                 <div class="col-md-6 p-md-3">
-                    <div class="work-content h-100">
+                    <div class="work-content work-image-click w-100 h-100">
                         <img src="images/work-image4.png" class="w-100" alt="">
                         <div class="d-flex justify-content-between py-4">
                             <div>
@@ -390,8 +391,8 @@
                     </div>
                 </div>
                 <div class="col-md-6 p-md-3">
-                    <div class="work-content h-100">
-                        <img src="images/work-image5.png" class="w-100" alt="">
+                    <div class="work-content work-image-click w-100 h-100">
+                        <img src="images/work-image5.png" class="w-100 " alt="">
                         <div class="d-flex justify-content-between py-4">
                             <div>
                                 <span>Product Design</span>
@@ -404,8 +405,8 @@
                     </div>
                 </div>
                 <div class="col-md-6 p-md-3">
-                    <div class="work-content h-100">
-                        <img src="images/work-image6.png" class="w-100" alt="">
+                    <div class="work-content work-image-click w-100 h-100">
+                        <img src="images/work-image6.png" class="w-100 " alt="">
                         <div class="d-flex justify-content-between py-4">
                             <div>
                                 <span>Product Design</span>
@@ -423,11 +424,21 @@
                 <i class="fa-solid fa-arrow-right mx-2"></i>
                 <span>Click More Work</span>
             </div>
+            <div class="w-100 vh-100 position-fixed  top-0 start-0 d-none
+             justify-content-center align-items-center" id="lightBoxContainer">
+                <div id="lightBoxItem">
+                    <img id="boxItemImg" class="w-100" height="550" alt="">
+                    <p id="index-item" class="lead text-end p-2"></p>
+                    <i id="next" class="fa-solid fa-angle-right position-absolute top-50 end-0 p-3"></i>
+                    <i id="prev" class="fa-solid fa-angle-left position-absolute top-50 start-0 p-3"></i>
+                    <i id="closed-image" class="fa-solid fa-xmark position-absolute top-0 end-0 p-3"></i>
+                </div>
+            </div>
         </div>
      </section>
      <!-- =============================== services section ============================================ -->
      <section class="py-4">
-        <div class="title-section text-center p-lg-5 p-2">
+        <div class="title-section color-section text-center p-lg-5 p-2">
             <div class="main-title-section show-section d-flex justify-content-center">
                 <div class="title-line m-3"></div>
                 <h2>Services That i Provide</h2>
@@ -438,7 +449,7 @@
         <div id="Business"></div>
      </section>
      <!-- ==================================== testimonial section ============================================== -->
-     <!-- <section>
+     <section class="my-5">
         <div class="testimonial-section">
             <div class="title-section text-center p-lg-5 p-2">
                 <div class="main-title-section show-section d-flex justify-content-center">
@@ -449,7 +460,65 @@
                 <p class="px-md-5 py-3 m-auto show-section">Happy Words From Happy Customer</p>
             </div>
         </div>
-     </section> -->
+        <div class="customers-slider color-section position-relative rounded-4 p-3 d-flex justify-content-between container-lg">
+            <div class="fixed-images">
+              <img class="d-block p-4" src="images/customer2.png" alt="">
+              <img class="p-4" src="images/customer3.png" alt="" >
+            </div>
+              <!-- Swiper -->
+              <div class="swiper  testimonial-swiper ">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide  text-start p-md-5 p-2">
+                    <div class="stars py-3">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="quote show-section py-3">"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam dolor fugiat quo, minima fuga nulla
+                         beatae qui architecto a laboriosam ullam in iusto eligendi quis dolore ad voluptatem porro laudantium"</p>
+                    <p class="name">John Doe</p>
+                    <p class="role">Product Designer</p>
+                  </div>
+                  <div class="swiper-slide  text-start p-md-5 p-2">
+                    <div class="stars py-3">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="quote show-section py-3">"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam dolor fugiat quo, minima fuga nulla
+                         beatae qui architecto a laboriosam ullam in iusto eligendi quis dolore ad voluptatem porro laudantium"</p>
+                    <p class="name">Shawan Beltran</p>
+                    <p class="role">Bussiness Owner</p>
+                  </div>
+                  <div class="swiper-slide  text-start p-md-5 p-2">
+                    <div class="stars py-3">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="quote show-section py-3">"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam dolor fugiat quo, minima fuga nulla
+                         beatae qui architecto a laboriosam ullam in iusto eligendi quis dolore ad voluptatem porro laudantium"</p>
+                    <p class="name">Nethon Jr</p>
+                    <p class="role">Product Designer</p>
+                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+          
+            <div class="dots" id="dots-container"></div>
+            <div class="fixed-images text-end">
+                <img class="p-4 d-block" src="images/customer1.png" alt="">
+                <img class="image-rotate p-4" src="images/download.png" alt="">
+            </div>
+          </div>
+          
+     </section>
      <!-- ==================================== more companies section ======================================== -->
       <section>
         <div class="more-companies container-lg text-center py-5">
@@ -483,9 +552,92 @@
             </div>
         </div>
       </section>
-
+      <!-- ============================ recent posts section ================================= -->
+       <section>
+        <div class="posts-section w-100 py-5 px-2 color-section">
+            <div class="row w-100">
+                <div class="col-lg-4 col-12 py-5 ">
+                    <div>
+                        <div class="title-section text-center  p-2">
+                            <div class="main-title-section show-section d-flex justify-content-center">
+                                <div class="title-line m-3"></div>
+                                <h2>My Blogs</h2>
+                                <div class="title-line m-3"></div>
+                            </div>
+                            <p class="px-md-0 py-3 m-auto show-section">Recent Posts</p>
+                        </div>
+                        <div class="circle-button m-auto my-3  d-flex flex-column justify-content-center align-items-center ">
+                            <i class="fa-solid fa-arrow-right mx-2"></i>
+                            <span>Click More Posts</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8 col-12 p-4">
+                    <div class="posts">
+                        <div class="service-content work-image-click d-flex px-1 py-5 py-3">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="mx-2">
+                                    <span>October 19, 2023</span>
+                                    <a href="#" class="service-title  show-section">Brand design that helps <br> the company grow</a>
+                                </div>
+                            </div>
+                            <div class="post-img ">
+                                <img src="images/blog1.png" class="w-100" alt="">
+                            </div>
+                            <div class="show-icon p-4 rounded-circle ">
+                                <i class="fa-regular fa-eye"></i>
+                            </div>
+                        </div>
+                        <div class="service-content work-image-click  d-flex px-1 py-5 py-3">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="mx-2">
+                                    <span>October 19, 2023</span>
+                                    <a href="#" class="service-title show-section">Fresh design ideas &<br> inspiration for 2023</a>
+                                </div>
+                            </div>
+                            <div class="post-img ">
+                                <img src="images/blog2.png" class="w-100" alt="">
+                            </div>
+                            <div class="show-icon p-4 rounded-circle ">
+                                <i class="fa-regular fa-eye"></i>
+                            </div>
+                        </div>
+                        <div class="service-content  work-image-click d-flex px-1 py-5 py-3">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="mx-2">
+                                    <span>October 19, 2023</span>
+                                    <a href="#" class="service-title show-section">Fresh design ideas &<br> inspiration for 2023</a>
+                                </div>
+                            </div>
+                            <div class="post-img ">
+                                <img src="images/blog3.png" class="w-100" alt="">
+                            </div>
+                            <div class="show-icon  p-4 rounded-circle ">
+                                <i class="fa-regular fa-eye"></i>
+                            </div>
+                        </div>
+                        <div class="service-content  work-image-click d-flex px-1 py-5 py-3">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="mx-2">
+                                    <span>October 19, 2023</span>
+                                    <a href="#" class="service-title show-section">Fresh design ideas &<br> inspiration for 2023</a>
+                                </div>
+                            </div>
+                            <div class="post-img ">
+                                <img src="images/blog4.png" class="w-100" alt="">
+                            </div>
+                            <div class="show-icon  p-4 rounded-circle ">
+                                <i class="fa-regular fa-eye"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+       </section>
      <!-- ============================= footer section ======================================= -->
      <footer id="footer" class="w-100 pt-5"></footer>
+     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script type="module" src="script.js"></script>
 </body>
 </html>
