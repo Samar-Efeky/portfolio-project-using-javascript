@@ -2,7 +2,7 @@ import { aboutSection } from "./js/about.module.js";
 import { navbar } from "./js/navbar.module.js";
 import { setupObserver } from "./js/observer.module.js";
 import { workImage } from "./js/work.module.js";
-
+document.addEventListener("DOMContentLoaded", () => {
     // navigation bar ...........................................................//
     fetch("navbar.html")
           .then(response => response.text())
@@ -38,3 +38,4 @@ import { workImage } from "./js/work.module.js";
   };
 
 
+});
