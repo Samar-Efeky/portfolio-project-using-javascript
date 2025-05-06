@@ -4,13 +4,7 @@ import { setupObserver } from "./js/observer.module.js";
 import { testimonial } from "./js/testimonial.module.js";
 import { workImage } from "./js/work.module.js";
 document.addEventListener("DOMContentLoaded", () => {
-    // navigation bar ...........................................................//
-    fetch("navbar.html")
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById("navbar").innerHTML = data;
-        navbar();  
-    });  
+    navbar();
     fetch("work.section.html")
       .then(response => response.text())
       .then(data => {
