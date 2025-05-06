@@ -1,5 +1,6 @@
 import {aboutSection} from "./js/about.module.js";
 import { navbar } from "./js/navbar.module.js";
+import { setupObserver } from "./js/observer.module.js";
 import { testimonial } from "./js/testimonial.module.js";
 import { workImage } from "./js/work.module.js";
 document.addEventListener("DOMContentLoaded", () => {
@@ -10,42 +11,30 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById("navbar").innerHTML = data;
         navbar();  
     });  
-    aboutSection();
+    fetch("work.section.html")
+      .then(response => response.text())
+      .then(data => {
+        document.querySelector(".working").innerHTML = data; 
+        setupObserver();
+        workImage();
+        aboutSection();
+    });  
     // header video play .........................................................//
     (function(){
-        let videoHeader=document.querySelector(".video-header");
-        let videoIcon=document.querySelector(".video-play i");
-        let closeVideo=document.getElementById("close-video");
-        videoIcon.addEventListener("click",()=>{
-          videoHeader.classList.replace("d-none","d-flex");
+      let videoHeader = document.querySelector(".video-header");
+      let videoIcon = document.querySelector(".video-play i");
+      let closeVideo = document.getElementById("close-video");
+    
+      if (videoHeader && videoIcon && closeVideo) {
+        videoIcon.addEventListener("click", () => {
+          videoHeader.classList.replace("d-none", "d-flex");
         });
-        closeVideo.addEventListener("click",()=>{
-          videoHeader.classList.replace("d-flex","d-none");
+        closeVideo.addEventListener("click", () => {
+          videoHeader.classList.replace("d-flex", "d-none");
         });
+      }
     })();
-  });
-  function setupObserver() {
-    const sectionView = document.querySelectorAll(".show-section");
-  
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        const ratio = entry.intersectionRatio;
-  
-        if (ratio === 1) {
-          entry.target.classList.add('show');
-        } else if (ratio < 0.5) {
-          entry.target.classList.remove('show');
-        }
-      });
-    }, {
-      threshold: Array.from({ length: 101 }, (_, i) => i / 100) // [0, 0.01, ..., 1]
-    });
-  
-    sectionView.forEach(section => {
-      observer.observe(section);
-    });
-  }
-  
+
   
   fetch("footer.html")
   .then(response => response.text())
@@ -71,6 +60,5 @@ fetch("business.html")
         document.getElementById("Business").innerHTML = data; 
         setupObserver();
 });  
-
 testimonial();
-workImage();
+});

@@ -103,12 +103,12 @@ p{
 .circle-button:hover::before{
   top:-10px;
 }
-#lightBoxContainer{
+.lightBoxContainer{
   background-color: rgba(0, 0, 0,0.8);
   z-index: 999;
 
 }
-#lightBoxItem{
+.lightBoxItem{
   width: 50%;
 }
 /* .................... general styling end ...........................................................................*/
@@ -150,6 +150,9 @@ p{
   to { opacity: 1; transform: translateY(0); }
 }
 /*======================= section title and Pragraph ================*/
+.work-page{
+  background-color: var(--bg-section);
+}
 .title-section h2{
   font-size: 2rem;
   font-family: "Caveat", cursive;
@@ -485,6 +488,9 @@ p{
 .work-content p{
   font-size: 1.7rem;
 }
+.work-content p.show{
+  animation: slideUp 1s ease-out;
+}
 .work-content:hover .work-icon{
   background-color: var(--main-color);
   color: var(--black-color);
@@ -756,7 +762,7 @@ p{
     width: 150px;
     height: 150px;
   }
-  #lightBoxItem{
+  .lightBoxItem{
     width: 70%;
   }
   /*======================= section title and Pragraph ================*/
@@ -896,7 +902,7 @@ p{
   }
 }
 @media screen and (max-width:500px){
-  #lightBoxItem{
+  .lightBoxItem{
     width: 80%;
   }
   /*======================= section title and Pragraph ================*/
@@ -935,6 +941,12 @@ p{
   .video-header .video-content{
     width: 100%;
     height: 70%;
+  }
+  .links a{
+    margin: 0% 1%;
+    font-size: 1rem;
+    padding: 1% 1%;
+    border-radius: 4px;
   }
   .skills-percent{
     font-size: 1.3rem;

@@ -1,11 +1,11 @@
 export function workImage(){
     let workImages=Array.from(document.querySelectorAll(".work-image-click"));
-    let lightBoxContainer=document.getElementById("lightBoxContainer");
-    let boxItemImg=document.getElementById("boxItemImg");
-    let nextImage=document.getElementById("next");
-    let prevImage=document.getElementById("prev");
-    let closedImage=document.getElementById("closed-image");
-    let indexItem=document.getElementById("index-item");
+    let lightBoxContainer=document.querySelector(".lightBoxContainer");
+    let boxItemImg=document.querySelector(".boxItemImg");
+    let nextImage=document.querySelector(".next");
+    let prevImage=document.querySelector(".prev");
+    let closedImage=document.querySelector(".closed-image");
+    let indexItem=document.querySelector(".index-item");
     let currentIndex=0;
     let imagesLength=0;
     workImages.forEach((image) => {
@@ -52,4 +52,13 @@ export function workImage(){
     prevImage.addEventListener("click",()=>{
         prevSlider();
     });
+    document.addEventListener("keydown",(e)=>{
+        if(e.key=="ArrowRight"){
+            nextSlider();
+        }
+        else if(e.key=="ArrowLeft"){
+            prevSlider();
+        }
+        
+    })
 }
