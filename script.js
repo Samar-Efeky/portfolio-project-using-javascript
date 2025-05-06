@@ -3,7 +3,6 @@ import { navbar } from "./js/navbar.module.js";
 import { setupObserver } from "./js/observer.module.js";
 import { testimonial } from "./js/testimonial.module.js";
 import { workImage } from "./js/work.module.js";
-document.addEventListener("DOMContentLoaded", () => {
     // navigation bar ...........................................................//
     fetch("navbar.html")
       .then(response => response.text())
@@ -61,4 +60,3 @@ fetch("business.html")
         setupObserver();
 });  
 testimonial();
-});
