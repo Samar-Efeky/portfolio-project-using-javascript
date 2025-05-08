@@ -34,7 +34,6 @@ export function navbar(){
     // navigation bar links in small screens ..................//
     mediaQuery.addEventListener("change",(e)=>{
         if (!e.matches) {
-            // لو الشاشة أكبر من 950px
             navbar.style.display = "flex";
             navbarList.style.display = "none";
             closedNavbar.style.display = "none";

@@ -733,7 +733,6 @@ p{
 }
 .blog-content a{
   font-size: 1.7rem;
-  border-bottom: 0.1px solid var(--border-color);
 }
 .blog-content span{
   color: var(--color-pragrah);

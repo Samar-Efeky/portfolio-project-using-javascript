@@ -5,11 +5,11 @@ export function setupObserver() {
     entries.forEach(entry => {
       if (entry.intersectionRatio >= 0.3) {
         entry.target.classList.add('show');
-        observer.unobserve(entry.target); // وقف المراقبة بعد أول ظهور
+        observer.unobserve(entry.target);
       }
     });
   }, {
-    threshold: 0.3 // أول ما يوصل 30% من العنصر
+    threshold: 0.3 
   });
 
   sectionView.forEach(section => {
