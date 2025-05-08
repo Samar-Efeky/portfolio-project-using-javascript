@@ -64,4 +64,14 @@ fetch("business.html")
         setupObserver();
 });  
 testimonial();
+// ==================== link scroll down in header section ============ 
+let scrollDown=document.querySelectorAll(".scroll-down");
+let sectionScrollDown=document.getElementById("information-section");
+scrollDown.forEach((link)=>{
+  link.addEventListener("click",()=>{
+    sectionScrollDown.scrollIntoView({
+      behavior:"smooth"
+    });
+  });
+});
 });

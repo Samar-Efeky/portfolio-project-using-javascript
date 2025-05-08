@@ -17,19 +17,21 @@
     --bg-section:#15161A;
     --star-color:#ffc107;
 } 
-/* ::-webkit-scrollbar {
-  width: 8px; 
+/*==================== scroll change style =====================*/
+::-webkit-scrollbar {
+  width: 6px; 
 }
 ::-webkit-scrollbar-thumb {
   background:var(--main-color);
   border-radius: 6px;
-} */
+}
 
 body{
     background-color:var(--black-color);
     color: var(--white-color);
     overflow: hidden;
 }
+/*================= loading screen start ======================*/
 .loading{
   z-index: 999999999999;
 }
@@ -63,6 +65,7 @@ body{
 @keyframes moveX {
   100% {transform:translate(0.15px)}
 }
+/*================= loading screen end ======================*/
 a{
   text-decoration: none;
   transition: all 0.3s ease-out;
@@ -277,7 +280,7 @@ p{
   z-index: 200;
   border-left: 1px solid var(--border-color);
   width: 25%;
-  right: -200%;
+  right: -100%;
   transition: all 0.3s;
 }
 .main-content{
@@ -290,7 +293,7 @@ p{
   border-radius: 50%;
   background-color: var(--main-color);
   cursor: pointer;
-  transition: all 0.4s ease-out;
+  transition: all 0.4s;
 }
 .social-media i:hover{
   color: white;
