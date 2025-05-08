@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matias</title>
+    <link rel="icon" type="image/png" href="images/logo-image.png">
+    <link rel="stylesheet" href="css/all.min.css" >
+    <link rel="stylesheet" href="css/bootstrap.min.css" >
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+     <!-- =================================== loading screen ================================== -->
+     <div class="loading  position-fixed top-0 bottom-0 start-0 end-0 
+     d-flex justify-content-center align-items-center bg-black">
+     <span class="loader"></span>
+     </div>
+    <nav  class="w-100">
+        <div class="navbar-content fixed-top container-fluid  d-flex ">
+       <div class="logo py-3 ">
+           <img src="images/logo.png" class="" alt="matias">
+       </div><!-- logo -->
+       <ul class="navbar-links  justify-content-between   list-unstyled px-4 py-2 pt-4">
+           <li>
+               <a href="index.html#home-page">home</a>
+           </li>
+           <li>
+               <a href="index.html#information-section">about</a>
+           </li>
+           <li>
+               <a href="index.html#link-work">work</a>
+           </li>
+           <li class="dropdown  position-relative ">
+               <a href="index.html#service-link" class="dropdown-link">services</a>
+                   <div class="dropdown-list bg-white position-absolute top-100 start-0 ">
+                       <div class="arrow-up position-absolute"></div>
+                       <a href="services.html">services</a>
+                       <a href="service.details.html">service details</a>
+                   </div> <!-- dropdown-list -->
+           </li> 
+           <li>
+               <a href="index.html#testimonial-link">testimonial</a>
+           </li>
+           <li class="dropdown position-relative ">
+               <a href="index.html#blogs-link" class="dropdown-link">blog</a>
+                   <div class="dropdown-list bg-white position-absolute top-100 start-0 ">
+                       <div class="arrow-up position-absolute"></div>
+                       <a href="blog.html">blog</a>
+                       <a href="blog.details.html">blog details</a>
+                   </div> <!-- dropdown-list -->
+           </li> 
+           <li>
+               <a href="contact.html">contact</a>
+           </li>
+       </ul> <!-- navbar-links -->
+       <div class="icons-list   ms-auto px-3 py-3">
+          <div class="d-flex">
+           <button id="button-navbar" class="px-4 py-lg-2 ">Let's Talk <i class="fa-solid fa-arrow-right"></i></button>
+           <div class="icons text-white mx-3 position-relative">
+               <i class="fa-solid fa-bars lh-lg position-absolute "></i>
+               <i class="fa-solid fa-xmark  position-absolute lh-lg "></i>
+           </div> <!-- icons -->
+           <i id="list-navbar" class="fa-solid fa-bars px-3 bg-white text-black rounded-2   ms-3 lh-lg"></i>
+          </div>
+          <div class="side-bar position-fixed bg-black p-3 vh-100 top-0 ">
+           <div id="close-side-bar" class="position-absolute top-0 end-0 p-3">
+               <i class="fa-solid fa-xmark closed-content p-2 rounded-2"></i>
+           </div>
+           <div class="logo  border-0 mt-5">
+               <img src="images/logo.png" class="" alt="logo">
+           </div>
+           <p class="my-4">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis, ex. Sunt molestias commodi, asperiores quos itaque voluptatum minima quasi dolores animi eveniet provident ullam nostrum. Quod labore corrupti amet nostrum!
+           Pariatur illum </p>
+           <div>
+               <span class="main-content fw-bolder text-uppercase">address</span>
+               <p>Nasr City, Egypt.</p>
+           </div>
+           <div>
+               <span class="main-content fw-bolder text-uppercase">email</span>
+               <p><a href="mailto:samarelfeky69@gmail.com">samarelfeky69@gmail.com</a></p>   
+           </div>
+           <div>
+               <span class="main-content fw-bolder text-uppercase">call now</span>
+               <p>+2012 0775 2327</p>
+           </div>
+           <div class="social-media py-5">
+               <i class="fa-brands fa-facebook"></i>
+               <i class="fa-brands fa-twitter"></i>
+               <i class="fa-brands fa-linkedin"></i>
+               <i class="fa-brands fa-youtube"></i>
+           </div> <!-- social-media -->
+           <div class="position-absolute bottom-0 start-0 w-100 px-5">
+               <button class="px-4 py-3  w-100"><i class="fa-solid fa-arrow-left"></i> Let's Talk</button>
+           </div>
+          </div> <!-- side-bar -->
+       </div>
+   </div> <!-- navbar-content -->
+   </nav>
+   <section class="mt-5">
+     <div class="contact p-lg-5 p-2">
+        <div class="title-section  text-center p-lg-5 p-2 ">
+            <p class="px-lg-5 py-3 pt-5 m-auto show-section">Let's Start Something</p>
+            <div class="main-title-section show-section d-flex justify-content-center">
+                <h2><span class="text-white">Home / </span>Let's Start Something</h2>
+            </div>
+        </div>
+        <div class="row ps-1">
+            <div class="col-lg-7  col-12 p-3">
+                <div class="contact-content p-xl-5 p-lg-4 p-sm-5 p-2 rounded-3 h-100">
+                    <h3 class="my-3">Leave a Reply</h3>
+                    <span >Your email address will not be published. Required fields are marked *</span>
+                    <input class="w-100  p-2 my-3 border-0 text-white bg-dark rounded-2" type="text" placeholder="Name">
+                    <input class="w-100  p-2 my-3 border-0 text-white bg-dark rounded-2" type="email" placeholder="Email">
+                    <textarea placeholder="Write Comments" name="comment" rows="3"
+                     class="w-100  p-2 my-3 border-0 text-white bg-dark rounded-2">
+                    </textarea>
+                    <button id="button-navbar" class="px-4 py-2 my-3">Submit Comment <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+            </div>
+            <div class="col-lg-5 col-12 p-3">
+                <div class="contact-content personal-info  p-xl-5 p-lg-4 p-sm-5 p-2 text-start  rounded-3 border-0 h-100">
+                    <h3 class="my-3">Feel free to contact me anytime</h3>
+                    <span class="main-content pt-2 fw-bolder text-uppercase">email</span>
+                    <p class="py-2"><a class="text-white" href="mailto:samarelfeky69@gmail.com">samarelfeky69@gmail.com</a></p> 
+                    <span class="main-content pt-2 fw-bolder text-uppercase">Phone</span>
+                    <p class="py-2"><a class="text-white" href="#">+2012 0775 2327</a></p> 
+                    <span class="main-content pt-2 fw-bolder text-uppercase">Address</span>
+                    <p class="py-2"><a class="text-white" href="#">Nasr City, Egypt.</a></p> 
+                </div>  
+            </div>
+        </div>
+     </div>
+   </section>
+   <footer id="footer" class="w-100 pt-5"></footer>
+   <script type="module" src="work.js"></script>
+</body>

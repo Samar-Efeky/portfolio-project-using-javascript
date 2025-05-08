@@ -21,7 +21,7 @@ export function aboutSection(){
             let sectionId = e.target.getAttribute('href').replace('#', '');
             showSection(sectionId, e.target);
         })
-    })
+    });
     if (links.length > 0) {
       let firstLink = links[0];
       let sectionId = firstLink.getAttribute('href').replace('#', '');

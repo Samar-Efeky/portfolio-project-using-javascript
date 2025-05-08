@@ -3,14 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" media="print" onload="this.media='all'"/>
-    <link rel="stylesheet" href="css/all.min.css" media="print" onload="this.media='all'">
-    <link rel="stylesheet" href="css/bootstrap.min.css" media="print" onload="this.media='all'">
-    <script src="js/bootstrap.bundle.min.js" defer></script>
+    <title>Matias</title>
+    <link rel="icon" type="image/png" href="images/logo-image.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <!-- =================================== loading screen ================================== -->
+    <div class="loading  position-fixed top-0 bottom-0 start-0 end-0 
+    d-flex justify-content-center align-items-center bg-black">
+    <span class="loader"></span>
+    </div>
     <!-- ===================================== navigation bar ============================================ -->
    <nav class="w-100">
     <div class="navbar-content fixed-top container-fluid  d-flex ">
@@ -31,8 +37,8 @@
                 <a href="#service-link" class="dropdown-link">services</a>
                     <div class="dropdown-list bg-white position-absolute top-100 start-0 ">
                         <div class="arrow-up position-absolute"></div>
-                        <a href="#">services</a>
-                        <a href="#">service details</a>
+                        <a href="services.html">services</a>
+                        <a href="service.details.html">service details</a>
                     </div> <!-- dropdown-list -->
             </li> 
             <li>
@@ -42,12 +48,12 @@
                 <a href="#blogs-link" class="dropdown-link">blog</a>
                     <div class="dropdown-list bg-white position-absolute top-100 start-0 ">
                         <div class="arrow-up position-absolute"></div>
-                        <a href="#">blog</a>
-                        <a href="#">blog details</a>
+                        <a href="blog.html">blog</a>
+                        <a href="blog.details.html">blog details</a>
                     </div> <!-- dropdown-list -->
             </li> 
             <li>
-                <a href="#">contact</a>
+                <a href="contact.html">contact</a>
             </li>
         </ul> <!-- navbar-links -->
         <div class="icons-list   ms-auto px-3 py-3">
@@ -505,7 +511,7 @@
             <div class="dots" id="dots-container"></div>
             <div class="fixed-images text-end">
                 <img class="p-4 d-block" src="images/customer1.png" alt="">
-                <img class="image-rotate p-4" src="images/download.png" alt="">
+                <img class="image-rotate p-4" src="images/download1.png" alt="">
             </div>
           </div>
           
@@ -629,6 +635,6 @@
      <!-- ============================= footer section ======================================= -->
      <footer id="footer" class="w-100 pt-5"></footer>
      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script type="module" src="script.js" defer></script>
+    <script type="module" src="script.js"></script>
 </body>
 </html>

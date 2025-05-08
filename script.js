@@ -3,6 +3,11 @@ import { navbar } from "./js/navbar.module.js";
 import { setupObserver } from "./js/observer.module.js";
 import { testimonial } from "./js/testimonial.module.js";
 import { workImage } from "./js/work.module.js";
+window.addEventListener('load',()=>{
+  let loading=document.querySelector(".loading");
+  loading.classList.replace("d-flex","d-none");
+  document.body.style.overflow = 'auto';
+});
 document.addEventListener("DOMContentLoaded", () => {
     navbar();
     fetch("work.section.html")
@@ -26,9 +31,13 @@ document.addEventListener("DOMContentLoaded", () => {
         closeVideo.addEventListener("click", () => {
           videoHeader.classList.replace("d-flex", "d-none");
         });
+        videoHeader.addEventListener("click",(e)=>{
+          if(e.target===videoHeader){
+            videoHeader.classList.replace("d-flex", "d-none");
+          };
+        });
       }
     })();
-
   
   fetch("footer.html")
   .then(response => response.text())
