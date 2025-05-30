@@ -35,6 +35,9 @@ export function navbar(){
         else if(link.getAttribute("href")==="index.html#home-page"&&currentUrl==="index.html"&&location.hash===""){
             link.classList.add("active");
         }
+        else if(link.getAttribute("href")==="index.html#home-page"&&currentUrl===""&&location.hash===""){
+            link.classList.add("active");
+        }
     });
     }
     setLinkActive();
