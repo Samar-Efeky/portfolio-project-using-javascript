@@ -27,6 +27,8 @@ export function navbar(){
     function setLinkActive(){
          linkNavbar.forEach((link)=>{
         let currentUrl=location.pathname.split("/").pop().replace("/","");
+        console.log(currentUrl);
+        
         if(link.getAttribute("href")===currentUrl||link.getAttribute("href")===currentUrl+location.hash){
             link.classList.add("active");
         } 
