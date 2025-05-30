@@ -26,7 +26,7 @@ export function navbar(){
     });
     function setLinkActive(){
          linkNavbar.forEach((link)=>{
-        let currentUrl=location.pathname.replace("/","");
+        let currentUrl=location.pathname.split("/").pop().replace("/","");
         if(link.getAttribute("href")===currentUrl||link.getAttribute("href")===currentUrl+location.hash){
             link.classList.add("active");
         } 
