@@ -813,9 +813,6 @@ input::placeholder{
   font-size: 3.2rem;
   width: 70%; 
 }
-  .navbar-content{
-    background-color: var(--black-color);
-  }
   #button-navbar{
     display: none;
   }

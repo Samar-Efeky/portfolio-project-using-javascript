@@ -1,0 +1,73 @@
+Project Name: Personal Portfolio Website
+Version: 1.0.0
+Author: Samar Elfeky
+Technologies Used: 
+  - HTML5
+  - CSS3 (with optional Sass)
+  - JavaScript (Vanilla)
+  - Responsive Design (Flexbox/Grid)
+
+------------------------------------
+📌 Description:
+This is a modern and responsive personal portfolio website built using HTML, CSS, and JavaScript. The project showcases my work as a Front-End Developer, including featured projects, skills, about section, and contact form. The layout is clean, mobile-friendly, and interactive.
+
+------------------------------------
+📂 Folder Structure:
+
+/portfolio
+│
+├── /assets
+│   ├── /images         → All image files used in the project
+│   └── /icons          → Icons used across the site (SVG or PNG)
+│
+├── /css
+│   └── style.css       → Main stylesheet
+│
+├── /js
+│   └── script.js       → JavaScript for interactivity (menu toggle, scroll animations, etc.)
+│
+├── index.html          → Main entry HTML page
+└── README.md           → Project description and instructions
+
+------------------------------------
+⚙️ Features:
+
+- Responsive navigation bar with toggle menu
+- Hero section with name, title, and CTA
+- Projects section with cards or modals
+- About me section with short bio and skills
+- Contact form (static or with formspree integration)
+- Scroll-to-top button
+- Smooth scroll animation
+
+------------------------------------
+🧪 Browser Compatibility:
+✔️ Chrome (latest)
+✔️ Firefox
+✔️ Safari
+✔️ Edge
+
+------------------------------------
+📋 How to Use:
+
+1. Download or clone the repository.
+2. Open `index.html` in any modern browser.
+3. You can edit the content inside the HTML or add new projects in the Projects section.
+4. Modify colors/fonts via `style.css`.
+
+------------------------------------
+📦 Included Files:
+
+- index.html
+- /css/style.css
+- /js/script.js
+- /assets/images/
+- /assets/icons/
+- README.md
+- Documentation.txt (this file)
+
+------------------------------------
+📝 License:
+This project is licensed for personal or commercial use, but resale or redistribution as-is is not allowed without permission.
+
+For support or inquiries, feel free to contact me via LinkedIn or email.

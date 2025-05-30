@@ -9,7 +9,7 @@ export function navbar(){
     let linkNavbar = document.querySelectorAll(".navbar-links a");
     const mediaQuery = window.matchMedia("(max-width: 950px)");
     // active navigation bar links .................................................//
-    function removeActiveClass() {
+   function removeActiveClass() {
         linkNavbar.forEach(link => link.classList.remove("active"));
     };
     linkNavbar.forEach((link)=>{
@@ -19,17 +19,23 @@ export function navbar(){
                 closedNavbar.style.display="none";
                 navbarList.style.display="block";
             }
+            setLinkActive();
             removeActiveClass();
             e.target.classList.add("active");
         });
     });
-    linkNavbar.forEach((link)=>{
+    function setLinkActive(){
+         linkNavbar.forEach((link)=>{
         let currentUrl=location.pathname.replace("/","");
         if(link.getAttribute("href")===currentUrl||link.getAttribute("href")===currentUrl+location.hash){
             link.classList.add("active");
-        }    
-        console.log(currentUrl); 
-    })
+        } 
+        else if(link.getAttribute("href")==="index.html#home-page"&&currentUrl==="index.html"&&location.hash===""){
+            link.classList.add("active");
+        }
+    });
+    }
+    setLinkActive();
       
     // navigation bar links in small screens ..................//
     mediaQuery.addEventListener("change",(e)=>{
